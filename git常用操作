@@ -1,0 +1,43 @@
+1. 设置用户名
+git config --global user.name 'lifelong37learner'
+
+2. 设置用户名邮箱
+git config --global user.email '1945179618@qq.com'
+
+3. 创建一个文件夹
+mkdir test
+
+4.在文件内初始化git（创建git仓库）
+cd test
+git init
+
+5.向仓库中添加文件
+touch a1.php                         # 创建a1.php文件到工作目录
+git add a1.php                      # 添加a1.php到暂存区
+git commit -m  '第一次提交文件'     # 添加a1.php到仓库
+
+6.修改文件
+vi a1.php
+git status
+git add a1.php
+git commit -m '第一次通过git修改文件并提交到仓库'
+
+7.删除仓库文件
+rm -rf a1.php
+git rm a1.php
+git commit -m '第一次通过git删除仓库文件'
+
+8. 将本地仓库同步到远程仓库
+$ git add .
+$ git commit -m "xxx"
+$ git push origin master
+
+git push -u origin master
+
+
+$ git pull origin master –allow-unrelated-histories
+
+//最后强制提交成功
+$ git push -u origin master -f
+
+git push
